@@ -3,7 +3,7 @@ var c_booking = require('../_controller/c_booking');
 
 const router = express.Router();
 
-router.get('/all', function(req, res, next){
+router.get('/all/:date1/:date2', function(req, res, next){
     c_booking.getAll(req, res, next);
 });
 

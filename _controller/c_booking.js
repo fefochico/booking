@@ -2,12 +2,12 @@ var m_booking = require('../_model/m_booking');
 
 var booking = {
   getAll: function(req, res, next){
-    m_booking.findAll()
+    m_booking.getDataBookingBetweenDates(req, res, next)
     .then(result =>{
       res.send(result);
     })
-    .catch(() =>{
-      res.status(400).send({error: 'internal error'});
+    .catch(err =>{
+      res.status(400).send({error: err});
     })
   },
   insert: function(req, res, next){
