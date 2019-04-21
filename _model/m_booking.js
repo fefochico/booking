@@ -37,11 +37,11 @@ const booking = sequelize.define('booking', {
     type: Sequelize.STRING,
   },
   clienttelephone: {
-    allowNull: false,
+    allowNull: true,
     type: Sequelize.STRING,
   },
-  clientemail: {
-    allowNull: false,
+  clientmail: {
+    allowNull: true,
     type: Sequelize.STRING,
   },
   // Timestamps
@@ -55,9 +55,8 @@ booking.belongsTo(m_service, { foreignKey: 'idservice', onDelete: 'cascade'});
 booking.belongsTo(m_time, { foreignKey: 'idtime', onDelete: 'cascade'});
 
 booking.getDataBookingBetweenDates= function(req, res, next) {
-  console.log('WOOOLA');
   return sequelize.query(
-    `SELECT b.*, t.id AS idtime, t.name AS time, s.id AS idservie, s.name AS service, s.unit, r.id AS idroom, r.name AS room 
+    `SELECT b.*, t.id AS idtime, t.nametime AS time, s.id AS idservie, s.name AS service, s.unit, r.id AS idroom, r.name AS room 
     FROM bookings AS b 
     LEFT JOIN times AS t ON b.idstarttime=t.id 
     LEFT JOIN services AS s ON b.idservice=s.id 

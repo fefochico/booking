@@ -11,34 +11,46 @@ var time = {
     })
   },
   insert: function(req, res, next){
-    m_time.create(
-        {nametime: req.body.nametime, description: req.body.starttime})
-    .then(result =>{
-      res.send({id: result.id});
-    })
-    .catch(() =>{
-      res.status(400).send({error: 'Internal error'});
-    })
+    if(req.body.nametime){
+      m_time.create(
+        {nametime: req.body.nametime, description: req.body.description})
+      .then(result =>{
+        res.send({id: result.id});
+      })
+      .catch(() =>{
+        res.status(400).send({error: 'Internal error'});
+      })
+    }else{
+      res.status(404).send({error: 'It is necesary more parameters'});
+    }
   },
   edit: function(req, res, next){
-    m_time.update(        
+    if(req.body.id && req.body.nametime){
+      m_time.update(        
         {nametime: req.body.nametime, description: req.body.description}
         , {where: { id: req.body.id }})
-    .then(()=>{
-      res.send({affectedRows: affectedRows});
-    })
-    .catch(() =>{
-      res.status(400).send({error: 'Internal error'});
-    })
+      .then(result=>{
+        res.send({affectedRows: result[0]});
+      })
+      .catch(() =>{
+        res.status(400).send({error: 'Internal error'});
+      })
+    }else{
+      res.status(404).send({error: 'It is necesary more parameters'});
+    }
   },
   delete: function(req, res, next){
-    m_time.destroy({where: {id: req.body.id }})
-    .then(affectedRows =>{
-      res.send({affectedRows: affectedRows});
-    })
-    .catch(() =>{
-      res.status(400).send({error: 'Internal error'});
-    })
+    if(req.body.id){
+      m_time.destroy({where: {id: req.body.id }})
+      .then(result =>{
+        res.send({affectedRows: result});
+      })
+      .catch(() =>{
+        res.status(400).send({error: 'Internal error'});
+      })
+    }else{
+      res.status(404).send({error: 'It is necesary more parameters'});
+    }
   }
 }
 

@@ -8,17 +8,13 @@ const time = sequelize.define('time', {
    primaryKey: true,
    type: Sequelize.INTEGER,
   },
-  name: {
+  nametime: {
     allowNull: false,
     type: Sequelize.STRING,
   },
   description: {
     allowNull: false,
     type: Sequelize.STRING,
-  },
-  unit: {
-    allowNull: false,
-    type: Sequelize.INTEGER
   },
   // Timestamps
   createdAt: Sequelize.DATE,

@@ -11,6 +11,10 @@ router.post('/new', function(req, res, next){
     c_time.insert(req, res, next);
 });
 
+router.post('/edit', function(req, res, next){
+    c_time.edit(req, res, next);
+});
+
 router.post('/delete', function(req, res, next){
     c_time.delete(req, res, next);
 });

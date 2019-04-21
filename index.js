@@ -20,9 +20,9 @@ app.use(function(req, res, next) {
 });
 
 app.use('/booking/', r_booking);
-app.use('/time/', r_time);
+app.use('/time', r_time);
 app.use('/service/', r_service);
-app.use('/room/', r_room);
+app.use('/room', r_room);
 
 app.listen(3000, function() {
     console.log('Application on port 3000');
