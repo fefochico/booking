@@ -1,6 +1,6 @@
 # booking
 This project is A simple API Nodejs to manage service bookings in a company, for example, a hairdress. The entities that compose this API are:
-- Service (Kind of cut)
+- Service (Kind of haircut)
 - Room (Hairdressers)
 - Booking 
 - Time (Times of each day)
