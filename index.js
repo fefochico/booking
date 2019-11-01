@@ -3,10 +3,10 @@ var bodyParser = require("body-parser");
 
 var app = express();
 
-var r_booking= require('./_route/r_booking');
-var r_time= require('./_route/r_time');
-var r_service= require('./_route/r_service');
-var r_room= require('./_route/r_room.js');
+var r_booking= require('./src/_route/r_booking');
+var r_time= require('./src/_route/r_time');
+var r_service= require('./src/_route/r_service');
+var r_room= require('./src/_route/r_room.js');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
