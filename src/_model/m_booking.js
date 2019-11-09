@@ -66,7 +66,7 @@ booking.getDataBookingBetweenDates= function(req, res, next) {
   );
 };
 
-booking.sync();
+//booking.sync();
 
 
 module.exports= booking

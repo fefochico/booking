@@ -21,6 +21,6 @@ const time = sequelize.define('time', {
   updatedAt: Sequelize.DATE,
 });
 
-time.sync();
+//time.sync();
 
 module.exports= time

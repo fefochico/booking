@@ -25,6 +25,6 @@ const service = sequelize.define('service', {
   updatedAt: Sequelize.DATE,
 });
 
-service.sync();
+//service.sync();
 
 module.exports= service

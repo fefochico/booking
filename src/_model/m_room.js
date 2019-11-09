@@ -21,6 +21,6 @@ const room = sequelize.define('room', {
   updatedAt: Sequelize.DATE,
 });
 
-room.sync();
+//room.sync();
 
 module.exports= room
