@@ -17,27 +17,27 @@ _database/db.js
 
 # routes:
 ## service
-Get all services
-GET http://localhost:3000/service/all
+Get all services <br />
+GET http://localhost:3000/service/all <br />
 
-Add service
-POST http://localhost:3000/service/new
-Body:
-    {"name": "service_test", "description": "service_test_description", "unit": 3}
+Add service <br />
+POST http://localhost:3000/service/new <br />
+Body: <br />
+    {"name": "service_test", "description": "service_test_description", "unit": 3} <br />
 
-Update service
-POST http://localhost:3000/service/edit
-Body:
-    {"id": id,"name": "service_test", "description": "service_test_description", "unit": 4}
+Update service <br />
+POST http://localhost:3000/service/edit <br />
+Body: <br />
+    {"id": id,"name": "service_test", "description": "service_test_description", "unit": 4} <br />
 
-Remove service
-POST http://localhost:3000/service/delete
-Body:
-    {"id": id}
+Remove service <br />
+POST http://localhost:3000/service/delete <br />
+Body: <br />
+    {"id": id} <br />
 
 ## room
-Get all rooms
-GET http://localhost:3000/room/all
+Get all rooms <br />
+GET http://localhost:3000/room/all <br />
 
 Add room
 POST http://localhost:3000/room/new
