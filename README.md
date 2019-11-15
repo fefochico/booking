@@ -8,7 +8,9 @@ This project is A simple API Nodejs to manage service bookings in a company, for
 This API have been coding with the ORM sequelize and packages mysql, express and body-parser.
 You need to use this commant to up server: <br />
 > node index.js <br />
+
 This project have been testing with mocha chai and supertest to do it. <br />
+
 > npm test <br />
 
 # database
