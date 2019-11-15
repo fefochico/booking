@@ -16,7 +16,7 @@ It is necessary configure database file, in this case, you need to add a mysql d
 _database/db.js
 
 # routes:
-## service
+service <br />
 Get all services <br />
 GET http://localhost:3000/service/all <br />
 
@@ -35,65 +35,65 @@ POST http://localhost:3000/service/delete <br />
 Body: <br />
     {"id": id} <br />
 
-## room
+room <br />
 Get all rooms <br />
 GET http://localhost:3000/room/all <br />
 
-Add room
-POST http://localhost:3000/room/new
-Body:
-    {"name": "cabina_test", "description": "cabina_test_description"}
+Add room <br />
+POST http://localhost:3000/room/new <br />
+Body: <br />
+    {"name": "cabina_test", "description": "cabina_test_description"} <br />
 
-Update room
-POST http://localhost:3000/room/edit
-Body:
-    {"id": id,"name": "cabina_test2", "description": "cabina_test_description2"}
+Update room <br />
+POST http://localhost:3000/room/edit <br />
+Body: <br />
+    {"id": id,"name": "cabina_test2", "description": "cabina_test_description2"} <br />
 
-Remove room
-POST http://localhost:3000/room/delete
-Body:
-    {"id": id}
+Remove room <br />
+POST http://localhost:3000/room/delete <br />
+Body: <br />
+    {"id": id} <br />
 
-## time
-Get all times
-GET http://localhost:3000/time/all
+time <br />
+Get all times <br />
+GET http://localhost:3000/time/all <br />
 
-Add time
-POST http://localhost:3000/time/new
-Body:
-    {"nametime": "9:00", "description": "hola"}
+Add time <br />
+POST http://localhost:3000/time/new <br />
+Body: <br />
+    {"nametime": "9:00", "description": "hola"} <br />
 
-Update time
-POST http://localhost:3000/time/edit
-Body:
-    {"id": id,"nametime": "21:00", "description": "hola"}
+Update time <br />
+POST http://localhost:3000/time/edit <br />
+Body: <br />
+    {"id": id,"nametime": "21:00", "description": "hola"} <br />
 
-Remove time
-POST http://localhost:3000/time/delete
-Body:
-    {"id": id}
+Remove time <br />
+POST http://localhost:3000/time/delete <br />
+Body: <br />
+    {"id": id} <br />
 
-## booking
-Get all booking between 2 dates
-GET http://localhost:3000/booking/all/2019-04-09/2019-04-11
+booking <br />
+Get all booking between 2 dates <br />
+GET http://localhost:3000/booking/all/2019-04-09/2019-04-11 <br />
 
-Add booking
-POST http://localhost:3000/booking/new
-Body:
+Add booking <br />
+POST http://localhost:3000/booking/new <br />
+Body: <br />
     {"idstarttime": 1, "idservice": 1, "idroom": 1,
     "date": "2019-04-10",
     "clientname": "cliente_test", "clientsurname": "cliente_test", 
-    "clienttelephone": "123456789", "clientmail": "aaa@aaa.com"}
+    "clienttelephone": "123456789", "clientmail": "aaa@aaa.com"} <br />
 
-Update booking
-POST http://localhost:3000/booking/edit
-Body:
+Update booking <br />
+POST http://localhost:3000/booking/edit <br />
+Body: <br />
     {"id": id, "idstarttime": idtime, "idservice": idservice, "idroom": idroom,
     "date": "2019-04-10",
     "clientname": "cliente_test2", "clientsurname": "cliente_test2", 
-    "clienttelephone": "123456780", "clientmail": "aaa@aaa.com"}
+    "clienttelephone": "123456780", "clientmail": "aaa@aaa.com"} <br />
 
-Remove booking
-POST http://localhost:3000/booking/delete
-Body:
-    {"id": id}
+Remove booking <br />
+POST http://localhost:3000/booking/delete <br />
+Body: <br />
+    {"id": id} <br />
