@@ -6,7 +6,8 @@ var booking = {
     .then(result =>{
       res.send(result);
     })
-    .catch(err =>{
+    .catch(
+      err =>{
       res.status(400).send({error: err});
     })
   },
