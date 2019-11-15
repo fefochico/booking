@@ -15,8 +15,8 @@ This project have been testing with mocha chai and supertest to do it.
 It is necessary configure database file, in this case, you need to add a mysql database:
 _database/db.js
 
-# routes:
-service <br />
+# routes
+*service <br />
 Get all services <br />
 GET http://localhost:3000/service/all <br />
 
