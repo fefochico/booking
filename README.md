@@ -6,17 +6,17 @@ This project is A simple API Nodejs to manage service bookings in a company, for
 - Booking (One of each others)
 
 This API have been coding with the ORM sequelize and packages mysql, express and body-parser.
-You need to use this commant to up server:
-> node index.js
-This project have been testing with mocha chai and supertest to do it.
-> npm test
+You need to use this commant to up server: <br />
+> node index.js <br />
+This project have been testing with mocha chai and supertest to do it. <br />
+> npm test <br />
 
 # database
 It is necessary configure database file, in this case, you need to add a mysql database:
 _database/db.js
 
 # routes
-*service <br />
+## service <br />
 Get all services <br />
 GET http://localhost:3000/service/all <br />
 
@@ -35,7 +35,7 @@ POST http://localhost:3000/service/delete <br />
 Body: <br />
     {"id": id} <br />
 
-room <br />
+## room <br />
 Get all rooms <br />
 GET http://localhost:3000/room/all <br />
 
@@ -54,7 +54,7 @@ POST http://localhost:3000/room/delete <br />
 Body: <br />
     {"id": id} <br />
 
-time <br />
+## time <br />
 Get all times <br />
 GET http://localhost:3000/time/all <br />
 
@@ -73,7 +73,7 @@ POST http://localhost:3000/time/delete <br />
 Body: <br />
     {"id": id} <br />
 
-booking <br />
+## booking <br />
 Get all booking between 2 dates <br />
 GET http://localhost:3000/booking/all/2019-04-09/2019-04-11 <br />
 
